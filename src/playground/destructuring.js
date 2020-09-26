@@ -1,45 +1,46 @@
 //
-// Object destructuring
+// Object Destructing
+//
+/*const person = {
+    name : 'Pranjal',
+    age : '23',
+    location : {
+        city : 'Delhi',
+        temp : '28'
+    }
+}
+const {name, age} = person;
+console.log(`${name} is ${age} years old.`);
+
+const {city, temp: temperature} = person.location;
+if(city && temperature){
+    console.log(`It is ${temperature} in ${city}.`);
+}
+*/
+
+const book = {
+    title : 'Mathematics',
+    author : 'RD Sharma',
+    publisher: {
+        name: 'penguin'
+    }
+}
+
+const {name : publisherName = 'self-published'} = book.publisher;
+if(publisherName){
+    console.log(`This Book is published by ${publisherName}`);
+}
+
+//
+// Array Destructing
 //
 
-// const person = {
-//   name: 'Andrew',
-//   age: 27,
-//   location: {
-//     city: 'Philadelphia',
-//     temp: 88
-//   }
-// };
+/*const address = ['c-1/160', 'Sanjay Enclave', 'Uttam Nagar', 'New Delhi', '110059'];
 
-// const { name: firstName = 'Anonymous', age } = person;
-// console.log(`${firstName} is ${age}.`);
+const [houseno,street,area,city,zip] = address;
 
-// const { city, temp: temperature } = person.location;
-// if (city && temperature) {
-//   console.log(`It's ${temperature} in ${city}.`);
-// }
+console.log(`My address is ${houseno}, ${street}, ${area}, ${city}, ${zip}`);*/
 
-// const book = {
-//   title: 'Ego is the Enemy',
-//   author: 'Ryan Holiday',
-//   publisher: {
-//     // name: 'Penguin'
-//   }
-// };
-
-// const { name: publisherName = 'Self-Published' } = book.publisher;
-
-// console.log(publisherName); // Penguin, Self-Published
-
-//
-// Array destructuring
-//
-
-// const address = ['1299 S Juniper Street', 'Philadelphia', 'Pennsylvania', '19147'];
-// const [, city, state = 'New York'] = address;
-// console.log(`You are in ${city} ${state}.`);
-
-const item = ['Coffee (iced)', '$3.00', '$3.50', '$3.75'];
-const [itemName, , mediumPrice] = item;
-
-console.log(`A medium ${itemName} costs ${mediumPrice}`);
+const item = ['coffee(hot)', '60', '80', '100'];
+const [coffee, , medium, ] = item;
+console.log(`your ${coffee} is  rs ${medium}`);
