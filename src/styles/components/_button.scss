@@ -1,0 +1,25 @@
+.button {
+    background: $blue;
+    padding: $xs-size;
+    color: white;
+    border:none;
+    font-size: $font-size-large;
+    display: inline-block;
+    line-height: 1;
+    text-decoration: none;
+}
+
+.button-link{
+    background: none;
+}
+
+.button-secondary{
+    @extend .button;
+    background: #888888;
+    margin-bottom: $m-size;;
+}
+
+.button-save{
+    @extend .button;
+    width: 166px;
+}

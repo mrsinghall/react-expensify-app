@@ -1,0 +1,21 @@
+.text-input{
+    border: 1px solid #cccccd;
+    height: 50px;
+    padding: $xs-size;
+    font-size: $font-size-large;
+    font-weight: 300;
+    width:100%;
+    @media (max-width: $desktop-breakpoint) {
+        width: 100%;
+        max-width: 335px;
+    }
+}
+
+.select {
+    @extend .text-input;
+}
+
+.textarea{
+    @extend .text-input;
+    height: 10rem;
+}
